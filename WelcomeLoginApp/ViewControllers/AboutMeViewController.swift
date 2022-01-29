@@ -1,6 +1,6 @@
 //
 //  AboutMeViewController.swift
-//  lesson2.4logIn
+//  WelcomeLoginApp
 //
 //  Created by Anton Duplin on 23/1/22.
 //
@@ -11,7 +11,11 @@ class AboutMeViewController: UIViewController {
 
     @IBOutlet weak var aboutMeLabel: UILabel!
     
-    @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var myImage: UIImageView! {
+        didSet{
+            myImage.layer.cornerRadius = myImage.frame.height / 2
+        }
+    }
     
     var aboutMe: UserInfo!
     
@@ -20,18 +24,6 @@ class AboutMeViewController: UIViewController {
         aboutMeLabel.text = aboutMe.info.fullInfo
         myImage.image = UIImage(named: aboutMe.info.image)
         
-
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

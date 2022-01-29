@@ -1,6 +1,6 @@
 //
 //  mainProfileController.swift
-//  lesson2.3logIn
+//  WelcomeLoginApp
 //
 //  Created by Anton Duplin on 16/1/22.
 //
@@ -15,10 +15,6 @@ class mainProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         infoLabel.text = "Welcome, \(userInfo.info.fullName)!☺️"
-        
-
-        
-    }
  
-
+    }
 }
